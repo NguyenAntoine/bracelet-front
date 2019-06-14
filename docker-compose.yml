@@ -1,7 +1,7 @@
 version: '3'
 services:
     www:
-        image: apache:php
+        image: php:apache
         restart: on-failure
         env_file: .env
         networks:
