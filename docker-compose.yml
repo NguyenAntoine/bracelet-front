@@ -23,6 +23,15 @@ services:
       MYSQL_USER: observant
       MYSQL_PASSWORD: observant
       MYSQL_ALLOW_EMPTY_PASSWORD: '1'
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    ports:
+        - ${PHPMYADMIN_PORT:-8886:80}
+    depends_on:
+        - db
+    links:
+        - db:db
 networks:
     reverse-proxy:
         external:
