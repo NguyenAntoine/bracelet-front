@@ -21,7 +21,7 @@ services:
     environment:
       MYSQL_DATABASE: observant
       MYSQL_USER: observant
-      MYSQL_PASSWORD: observantpass
+      MYSQL_PASSWORD: observant
       MYSQL_ALLOW_EMPTY_PASSWORD: '1'
 networks:
     reverse-proxy:
