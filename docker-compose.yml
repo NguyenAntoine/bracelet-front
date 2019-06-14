@@ -5,7 +5,8 @@ services:
     restart: always
     volumes:
         - './www/:/var/www/html'
-    ports: 82:80
+    ports:
+        - 82:80
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: observant
