@@ -1,15 +1,27 @@
 version: '3'
 services:
-    www:
-        image: php:apache
-        restart: on-failure
-        env_file: .env
-        networks:
-            - default
-            - reverse-proxy
-        volumes:
-            - './www/:/usr/src/app'
-            - './docker/apache/default.conf:/etc/apache2/sites-enabled/000-default.conf:ro'
+  wordpress:
+    image: wordpress
+    restart: always
+    env_file: .env
+    networks:
+        - default
+        - reverse-proxy
+    volumes:
+        - './www/:/var/www/html'
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: observant
+      WORDPRESS_DB_PASSWORD: observant
+      WORDPRESS_DB_NAME: exampledb
+
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: exampledb
+      MYSQL_USER: observant
+      MYSQL_PASSWORD: observantpass
 networks:
     reverse-proxy:
         external:
