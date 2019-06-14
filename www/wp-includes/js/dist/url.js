@@ -489,7 +489,7 @@ function isValidAuthority(authority) {
  *
  * @example
  * ```js
- * const path1 = getPath( 'http://localhost:8080/this/is/a/test?query=true' ); // 'this/is/a/test'
+ * const path1 = getPath( 'https://observant.nguyenantoine.com:8080/this/is/a/test?query=true' ); // 'this/is/a/test'
  * const path2 = getPath( 'https://wordpress.org/help/faq/' ); // 'help/faq'
  * ```
  *
@@ -531,7 +531,7 @@ function isValidPath(path) {
  *
  * @example
  * ```js
- * const queryString1 = getQueryString( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // 'query=true'
+ * const queryString1 = getQueryString( 'https://observant.nguyenantoine.com:8080/this/is/a/test?query=true#fragment' ); // 'query=true'
  * const queryString2 = getQueryString( 'https://wordpress.org#fragment?query=false&search=hello' ); // 'query=false&search=hello'
  * ```
  *
@@ -573,7 +573,7 @@ function isValidQueryString(queryString) {
  *
  * @example
  * ```js
- * const fragment1 = getFragment( 'http://localhost:8080/this/is/a/test?query=true#fragment' ); // '#fragment'
+ * const fragment1 = getFragment( 'https://observant.nguyenantoine.com:8080/this/is/a/test?query=true#fragment' ); // '#fragment'
  * const fragment2 = getFragment( 'https://wordpress.org#another-fragment?query=true' ); // '#another-fragment'
  * ```
  *
