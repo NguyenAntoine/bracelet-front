@@ -3,12 +3,9 @@ services:
   wordpress:
     image: wordpress
     restart: always
-    env_file: .env
-    networks:
-        - default
-        - reverse-proxy
     volumes:
         - './www/:/var/www/html'
+    ports: 82:80
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: observant
@@ -32,7 +29,3 @@ services:
         - db
     links:
         - db:db
-networks:
-    reverse-proxy:
-        external:
-            name: reverse-proxy

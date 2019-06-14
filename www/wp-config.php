@@ -18,9 +18,6 @@
  */
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
-define('WP_PROXY_HOST', 'observant.nguyenantoine.com');
-define('WP_PROXY_PORT', '80');
-define('WP_PROXY_BYPASS_HOSTS', 'localhost');
 /** Nom de la base de données de WordPress. */
 define( 'DB_NAME', 'observant' );
 
